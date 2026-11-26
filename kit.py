@@ -64,7 +64,7 @@ def og():
         for t, y, f, col in (
             ("Kotten och diagrammet", 250, font, BLACK),
             ("Bilddiagram, stapeldiagram och tabell · matematik åk 1–3", 362, small, (74, 82, 96)),
-            ("Gratis · ingen inloggning · skolappar.com", 424, small, (120, 126, 136)),
+            ("Gratis · ingen inloggning · skolappar.org", 424, small, (120, 126, 136)),
         ):
             d.text((W / 2 - d.textlength(t, font=f) / 2, y), t, fill=col, font=f)
     im.save(P / "og.png")
@@ -93,10 +93,10 @@ def main():
         ],
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (P / "robots.txt").write_text(
-        "User-agent: *\nAllow: /\nSitemap: https://kottendiagrammet.skolappar.com/sitemap.xml\n", encoding="utf-8")
+        "User-agent: *\nAllow: /\nSitemap: https://kottendiagrammet.skolappar.org/sitemap.xml\n", encoding="utf-8")
     (P / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        '<url><loc>https://kottendiagrammet.skolappar.com/</loc></url>\n</urlset>\n', encoding="utf-8")
+        '<url><loc>https://kottendiagrammet.skolappar.org/</loc></url>\n</urlset>\n', encoding="utf-8")
     print("skrev ikoner, favicon, og.png, manifest, robots, sitemap till", P)
 
 
